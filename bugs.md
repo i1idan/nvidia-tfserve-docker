@@ -67,6 +67,13 @@ Then reboot the computer.
 
 BUG 3: Could not load dynamic library 'libcudart.so.11.0
 
+    sudo apt update
+    sudo apt install build-essential
+    gcc --version
+    g++ --version
+    sudo apt install nvidia-cuda-toolkit
+    nvcc --version
+
 First, find out where the "libcudart.so.11.0" is
 
 If you lost other at error stack, you can replace the "libcudart.so.11.0" by your word in below:
