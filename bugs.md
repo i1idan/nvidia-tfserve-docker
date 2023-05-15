@@ -63,3 +63,31 @@ solutions :
         sudo apt-get upgrade
         
 Then reboot the computer.
+
+
+BUG 3: Could not load dynamic library 'libcudart.so.11.0
+
+First, find out where the "libcudart.so.11.0" is
+
+If you lost other at error stack, you can replace the "libcudart.so.11.0" by your word in below:
+
+sudo find / -name 'libcudart.so.11.0'
+
+Output in my system.This result shows where the "libcudart.so.11.0" is in my system:
+
+/usr/local/cuda-11.1/targets/x86_64-linux/lib/libcudart.so.11.0
+
+If the result shows nothing, please make sure you have install cuda or other staff that must install in your system.
+Second, add the path to environment file.
+
+    edit /etc/profile
+
+sudo vim /etc/profile
+
+    append path to "LD_LIBRARY_PATH" in profile file
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-11.1/targets/x86_64-linux/lib
+
+    make environment file work
+
+source /etc/profile
