@@ -52,3 +52,14 @@ solutions :
     |=============================================================================|
     |  No running processes found                                                 |
     +-----------------------------------------------------------------------------+
+
+
+BUG 2: CUDA_ERROR_COMPAT_NOT_SUPPORTED_ON_DEVICE: kernel version 440.31.0 does not match DSO version 440.33.1 
+
+solutions :
+
+        sudo add-apt-repository ppa:graphics-drivers/ppa
+        sudo apt-get update
+        sudo apt-get upgrade
+        
+Then reboot the computer.
