@@ -98,3 +98,12 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-11.1/targets/x86_64-linu
     make environment file work
 
 source /etc/profile
+
+
+Bug 4: nvidia-smi stops working after reboot ununtu 18.04/ NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver. Make sure that the latest NVIDIA driver is installed and running
+
+    sudo reboot
+    
+
+If you have secure boot enabled, remember to "enroll mok" after reboot. Otherwise nvidia drivers won't be loaded. At least this happened to me.
+
